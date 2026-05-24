@@ -242,12 +242,15 @@
   }
   
   .image-section {
-    min-height: 400px;
+    height: 45vh;
+    min-height: 300px;
     flex: none;
   }
   
   .sidebar {
     max-width: 100%;
     min-width: 0;
+    flex: none;
+    overflow-y: visible;
   }
 }
