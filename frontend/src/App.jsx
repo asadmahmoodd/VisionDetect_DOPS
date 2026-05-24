@@ -73,7 +73,7 @@ function App() {
     formdata.append("file", imagefile);
 
     try {
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch("http://13.206.221.113:8000/predict", {
         method: 'POST',
         body: formdata
       });
