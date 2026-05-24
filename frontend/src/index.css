@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+  /* Core Colors */
+  --bg-primary: #0b0c10;
+  --bg-secondary: #1f2833;
+  --bg-panel: rgba(31, 40, 51, 0.6);
+  --text-primary: #ffffff;
+  --text-secondary: #c5c6c7;
+  
+  /* Accents */
+  --accent-cyan: #66fcf1;
+  --accent-teal: #45a29e;
+  --accent-glow: rgba(102, 252, 241, 0.4);
+  
+  /* Borders & Shadows */
+  --border-light: rgba(255, 255, 255, 0.1);
+  --shadow-panel: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  
+  /* Typography */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(69, 162, 158, 0.15), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(102, 252, 241, 0.1), transparent 25%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-teal);
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  box-shadow: var(--shadow-panel);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent-cyan) 0%, #a1ffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
